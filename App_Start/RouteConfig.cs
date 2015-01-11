@@ -10,6 +10,7 @@ namespace Orchestra
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute("HomeIndex", "", new {controller = "Home", action = "Index"});
+            routes.MapRoute("DivisionItem", "{*path}", new { controller = "Division", action = "Item" });
         }
     }
 }
