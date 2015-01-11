@@ -20,5 +20,11 @@ namespace Orchestra.Models.Divisions
                 .OrderBy(e => e.Priority)
                 .ToArray();
         }
+
+        public Division FindDivisionByPath(string path)
+        {
+            return orchestraDatabaseContext.Divisions
+                .FirstOrDefault(e => e.Path == path && e.Publish);
+        }
     }
 }

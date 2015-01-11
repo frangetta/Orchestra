@@ -6,5 +6,6 @@ namespace Orchestra.Models.Divisions
     public interface IDivisionRepository
     {
         IList<Division> GetMenuDivisions();
+        Division FindDivisionByPath(string path);
     }
 }
