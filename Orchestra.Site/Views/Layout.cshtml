@@ -1,0 +1,16 @@
+﻿@model Orchestra.Site.Models.Layout.ILayoutModelContainer
+
+<h1>Сайт оркестра</h1>
+
+<ul>
+    @foreach(var division in Model.LayoutModel.Menu)
+    {
+        <li>
+            <a href="@division.Path">
+                @division.Title
+            </a>
+        </li>
+    }
+</ul>
+
+@RenderBody()
