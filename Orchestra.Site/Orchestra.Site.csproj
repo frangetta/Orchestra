@@ -111,6 +111,7 @@
     <Compile Include="Models\Layout\ILayoutModelContainer.cs" />
     <Compile Include="Models\Layout\LayoutModel.cs" />
     <Compile Include="Models\Layout\LayoutModelBuilder.cs" />
+    <Compile Include="Models\Utilities\StandardContoller.cs" />
     <Compile Include="Models\Utilities\ResourceNotFoundException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

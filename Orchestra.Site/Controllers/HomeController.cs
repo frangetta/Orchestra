@@ -3,10 +3,11 @@ using Orchestra.DataLayer;
 using Orchestra.Site.Models.Divisions;
 using Orchestra.Site.Models.Home;
 using Orchestra.Site.Models.Layout;
+using Orchestra.Site.Models.Utilities;
 
 namespace Orchestra.Site.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : StandardContoller
     {
         private readonly IHomeViewModelBuilder homeViewModelBuilder;
 
@@ -20,5 +21,7 @@ namespace Orchestra.Site.Controllers
             var model = homeViewModelBuilder.Build();
             return View(model);
         }
+
+
 	}
 }

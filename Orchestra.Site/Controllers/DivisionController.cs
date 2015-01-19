@@ -2,10 +2,11 @@
 using Orchestra.DataLayer;
 using Orchestra.Site.Models.Divisions;
 using Orchestra.Site.Models.Layout;
+using Orchestra.Site.Models.Utilities;
 
 namespace Orchestra.Site.Controllers
 {
-    public class DivisionController : Controller
+    public class DivisionController : StandardContoller
     {
         private readonly IDivisionViewModelBuilder divisionViewModelBuilder;
         public DivisionController()
