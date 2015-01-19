@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchestra.DataLayer", "Orchestra.DataLayer\Orchestra.DataLayer.csproj", "{D7AEAD4E-B624-436A-A223-1E437DADC874}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchestra.Site", "..\Orchestra.Site\Orchestra.Site.csproj", "{2C4FF103-D494-4CFB-8644-82811A2EFF8A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchestra.Site", "Orchestra.Site\Orchestra.Site.csproj", "{EE4BFDCB-D878-4217-ACFD-F216EF347CB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,10 @@ Global
 		{D7AEAD4E-B624-436A-A223-1E437DADC874}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7AEAD4E-B624-436A-A223-1E437DADC874}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7AEAD4E-B624-436A-A223-1E437DADC874}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2C4FF103-D494-4CFB-8644-82811A2EFF8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C4FF103-D494-4CFB-8644-82811A2EFF8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2C4FF103-D494-4CFB-8644-82811A2EFF8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2C4FF103-D494-4CFB-8644-82811A2EFF8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE4BFDCB-D878-4217-ACFD-F216EF347CB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE4BFDCB-D878-4217-ACFD-F216EF347CB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE4BFDCB-D878-4217-ACFD-F216EF347CB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE4BFDCB-D878-4217-ACFD-F216EF347CB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
