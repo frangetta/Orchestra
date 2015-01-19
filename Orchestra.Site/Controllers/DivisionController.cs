@@ -1,7 +1,5 @@
 ﻿using System.Web.Mvc;
-using Orchestra.DataLayer;
 using Orchestra.Site.Models.Divisions;
-using Orchestra.Site.Models.Layout;
 using Orchestra.Site.Models.Utilities;
 
 namespace Orchestra.Site.Controllers
@@ -9,10 +7,10 @@ namespace Orchestra.Site.Controllers
     public class DivisionController : StandardContoller
     {
         private readonly IDivisionViewModelBuilder divisionViewModelBuilder;
-        public DivisionController()
+
+        public DivisionController(IDivisionViewModelBuilder divisionViewModelBuilder)
         {
-            var divisionRepository = new DivisionRepository(new OrchestraDatabaseContext());
-            divisionViewModelBuilder = new DivisionViewModelBuilder(new DivisionValidator(divisionRepository), new LayoutModelBuilder(divisionRepository));
+            this.divisionViewModelBuilder = divisionViewModelBuilder;
         }
 
         public ActionResult Item(string path)

@@ -1,8 +1,5 @@
 ﻿using System.Web.Mvc;
-using Orchestra.DataLayer;
-using Orchestra.Site.Models.Divisions;
 using Orchestra.Site.Models.Home;
-using Orchestra.Site.Models.Layout;
 using Orchestra.Site.Models.Utilities;
 
 namespace Orchestra.Site.Controllers
@@ -11,9 +8,9 @@ namespace Orchestra.Site.Controllers
     {
         private readonly IHomeViewModelBuilder homeViewModelBuilder;
 
-        public HomeController()
+        public HomeController(IHomeViewModelBuilder homeViewModelBuilder)
         {
-            homeViewModelBuilder = new HomeViewModelBuilder(new LayoutModelBuilder(new DivisionRepository(new OrchestraDatabaseContext())));
+            this.homeViewModelBuilder = homeViewModelBuilder;
         }
 
         public ActionResult Index()

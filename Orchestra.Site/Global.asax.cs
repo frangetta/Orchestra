@@ -1,5 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
+using Castle.Windsor;
+using Orchestra.Site.Models.Utilities;
 
 namespace Orchestra.Site
 {
@@ -9,6 +11,12 @@ namespace Orchestra.Site
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            var windsorContainer = new WindsorContainer();
+            ContainerConfig.RegisterInstallers(windsorContainer);
+            DependencyResolver.SetResolver(new WindsorDependencyResolver(windsorContainer));
+            ControllerBuilder.Current.SetControllerFactory(new WindsorControllerFactory(windsorContainer));
         }
+
+
     }
 }
