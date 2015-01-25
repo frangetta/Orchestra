@@ -6,16 +6,16 @@ namespace Orchestra.Site.Models.Divisions
 {
     public class DivisionRepository : IDivisionRepository
     {
-        private readonly OrchestraDatabaseContext orchestraDatabaseContext;
+        private readonly IDatabaseContext databaseContext;
 
-        public DivisionRepository(OrchestraDatabaseContext orchestraDatabaseContext)
+        public DivisionRepository(IDatabaseContext databaseContext)
         {
-            this.orchestraDatabaseContext = orchestraDatabaseContext;
+            this.databaseContext = databaseContext;
         }
 
         public IList<Division> GetMenuDivisions()
         {
-            return orchestraDatabaseContext.Divisions
+            return databaseContext.GetTable<Division>()
                 .Where(e => e.Publish && e.ShowMenu)
                 .OrderBy(e => e.Priority)
                 .ToArray();
@@ -23,7 +23,7 @@ namespace Orchestra.Site.Models.Divisions
 
         public Division FindDivisionByPath(string path)
         {
-            return orchestraDatabaseContext.Divisions
+            return databaseContext.GetTable<Division>()
                 .FirstOrDefault(e => e.Path == path && e.Publish);
         }
     }

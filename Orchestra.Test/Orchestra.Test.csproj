@@ -42,6 +42,7 @@
       <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -52,7 +53,9 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Models\Divisions\DivisionRepositoryTest.cs" />
     <Compile Include="Models\Divisions\DivisionValidatorTest.cs" />
+    <Compile Include="Models\Divisions\DivisionViewModelBuilderTest.cs" />
     <Compile Include="Utilities\MockingTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

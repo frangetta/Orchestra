@@ -28,6 +28,7 @@ namespace Orchestra.Site
                     .WithService.DefaultInterfaces(),
 
                 Component.For<ILayoutModelBuilder>().ImplementedBy<LayoutModelBuilder>().LifeStyle.PerWebRequest,
+                Component.For<IDatabaseContext>().ImplementedBy<DatabaseContext>().LifeStyle.PerWebRequest,
             });
         }
     }
